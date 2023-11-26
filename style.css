@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    align-items: flex-start;
+    color: black;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.pirmas input[type="text"],
+.antras button {
+    width: 180px;
+    padding: 3px;
+    box-sizing: border-box;
+    
+    margin: 0 auto;
+}
+
+.pirmas, .antras {
+   margin-left: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
+
+input[type="text"], button {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="submit"] {
+    width: 200px;
+    padding: 2px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lentele {
+    width: 550px;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+.lentele th, .lentele td {
+    border: 1px solid #e8ae31;
+    background-color: #3a2b6f;
+    padding: 8px;
+    color: white;
+}
+
+.lentele th {
+    background-color: #e8ae31;
+}

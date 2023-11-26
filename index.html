@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namu darbas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Namu darbas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        <h1>Append table</h1>
+        <div class="pirmas"> 
+            <input id="vardas" type="text" placeholder="Vardas">
+            <input id="pavarde" type="text" placeholder="Pavardė">
+            <input id="amzius" type="text" placeholder="Amžius"> 
+        </div>
+        <div class="antras">
+            <button onclick="prideti()">Pridėti</button>
+            <button onclick="istrintiPirma()">Ištrinti pirmą</button>
+            <button onclick="istrintiPaskutini()">Ištrinti paskutinį</button>
+        </div>
+    
+        <!-- lentele -->
+        <table class="lentele" id="myTable">
+            <thead>
+                <tr>
+                    <th>Vardas</th>
+                    <th>Pavardė</th>
+                    <th>Amžius</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jonas</td>
+                    <td>Rimkus</td>
+                    <td>54</td>
+                </tr>
+                <tr>
+                    <td>Vestina</td>
+                    <td>Petronytė</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Marius</td>
+                    <td>Dulinskas</td>
+                    <td>23</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <script>
+            function prideti() {
+                var vardas = document.getElementById("vardas").value;
+                var pavarde = document.getElementById("pavarde").value;
+                var amzius = document.getElementById("amzius").value;
+    
+                if (vardas && pavarde && amzius) {
+                    var table = document.getElementById("myTable");
+                    var newRow = table.insertRow(table.rows.length);
+                    var cell1 = newRow.insertCell(0);
+                    var cell2 = newRow.insertCell(1);
+                    var cell3 = newRow.insertCell(2);
+    
+                    cell1.innerHTML = vardas;
+                    cell2.innerHTML = pavarde;
+                    cell3.innerHTML = amzius;
+    
+                    document.getElementById("vardas").value = "";
+                    document.getElementById("pavarde").value = "";
+                    document.getElementById("amzius").value = "";
+                } else {
+                    alert("Užpildykite visus laukus!");
+                }
+            }
+    
+            function istrintiPirma() {
+                var table = document.getElementById("myTable");
+                if (table.rows.length > 1) {
+                    table.deleteRow(1);
+                }
+            }
+    
+            function istrintiPaskutini() {
+                var table = document.getElementById("myTable");
+                if (table.rows.length > 1) {
+                    table.deleteRow(table.rows.length - 1);
+                }
+            }
+        </script>
+        
+    </body>
+    </html>
+    
+    
+    <script src="script.js" ></script>
+</body>
+</html>
